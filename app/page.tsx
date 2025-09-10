@@ -1,4 +1,5 @@
 "use client"
+import Image from "next/image";
 import { WebGLShader } from "@/components/ui/web-gl-shader";
 import { LiquidButton } from "@/components/ui/liquid-glass-button";
 
@@ -11,7 +12,14 @@ export default function Home() {
           
           {/* Logo */}
           <div className="flex justify-center mb-6">
-            <img src="/logo.png" alt="CallToChef Logo" className="h-20 w-auto" />
+            <Image 
+              src="/logo.png" 
+              alt="CallToChef Logo" 
+              width={80} 
+              height={80} 
+              className="h-20 w-auto"
+              priority
+            />
           </div>
 
           <h1 className="mb-3 text-white text-center text-6xl font-extrabold tracking-tighter md:text-[clamp(2rem,8vw,7rem)]">
@@ -27,7 +35,7 @@ export default function Home() {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-500 opacity-75"></span>
               <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500"></span>
             </span>
-            <p className="text-xs text-green-500">Disponible dès aujourd'hui</p>
+            <p className="text-xs text-green-500">Disponible dès aujourd&apos;hui</p>
           </div>
 
           <div className="flex justify-center">
