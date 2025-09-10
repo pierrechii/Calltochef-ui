@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { ShaderAnimation } from "@/components/ui/shader-animation";
-import { ModernPricingPage, PricingCardProps } from "@/components/ui/animated-glassy-pricing";
+import { ModernPricingPage } from "@/components/ui/animated-glassy-pricing";
 
 export default function Presentation() {
   // Plans CallToChef
