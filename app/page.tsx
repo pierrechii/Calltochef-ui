@@ -1,6 +1,5 @@
-"use client"
+import Link from "next/link";
 import Image from "next/image";
-import Link from "next/link"; // ✅ Import du Link de Next.js
 import { WebGLShader } from "@/components/ui/web-gl-shader";
 import { LiquidButton } from "@/components/ui/liquid-glass-button";
 
@@ -10,13 +9,14 @@ export default function Home() {
       <WebGLShader />
       <div className="relative border border-[#27272a] p-2 w-full mx-auto max-w-3xl bg-transparent">
         <main className="relative border border-[#27272a] py-10 overflow-hidden">
+          
           {/* Logo */}
           <div className="flex justify-center mb-6">
-            <Image
-              src="/logo.png"
-              alt="CallToChef Logo"
-              width={80}
-              height={80}
+            <Image 
+              src="/logo.png" 
+              alt="CallToChef Logo" 
+              width={80} 
+              height={80} 
               className="h-20 w-auto"
               priority
             />
@@ -38,11 +38,11 @@ export default function Home() {
             <p className="text-xs text-green-500">Disponible dès aujourd&apos;hui</p>
           </div>
 
+          {/* Bouton qui redirige vers /presentation */}
           <div className="flex justify-center">
-            {/* ✅ Bouton redirige maintenant vers /presentation */}
             <Link href="/presentation">
               <LiquidButton className="text-white border rounded-full" size={"xl"}>
-                Voir la présentation
+                Essayer CallToChef
               </LiquidButton>
             </Link>
           </div>
