@@ -1,8 +1,8 @@
 "use client"
 
 import Link from "next/link"
+import { Suspense, useState, useEffect } from "react"
 import { useSearchParams } from "next/navigation"
-import { useState, useEffect, Suspense } from "react"
 import { GradientDots } from "@/components/ui/gradient-dots"
 
 function FormulaireContent() {
@@ -68,12 +68,9 @@ function FormulaireContent() {
 
   return (
     <div className="relative min-h-screen flex items-center justify-center px-6 py-12 overflow-hidden">
-      {/* Fond animé */}
       <GradientDots duration={20} className="z-0" />
 
-      {/* Contenu du formulaire */}
       <div className="relative z-10 w-full max-w-3xl bg-zinc-900/80 backdrop-blur-md p-8 rounded-lg shadow-lg border border-zinc-700">
-        {/* Message dynamique */}
         <h2 className="text-xl font-bold mb-4 text-center text-green-400">
           Vous avez choisi le pack {formData.abonnement} ✅
         </h2>
@@ -144,7 +141,7 @@ function FormulaireContent() {
             />
           </div>
 
-          {/* Abonnement (lecture seule) */}
+          {/* Abonnement (readonly) */}
           <div>
             <label className="block mb-2">Formule choisie</label>
             <input
@@ -155,7 +152,7 @@ function FormulaireContent() {
             />
           </div>
 
-          {/* Date de mise en place */}
+          {/* Date mise en place */}
           <div>
             <label className="block mb-2">Date de mise en place</label>
             <input
@@ -221,7 +218,6 @@ function FormulaireContent() {
             </span>
           </div>
 
-          {/* Bouton */}
           <button
             type="submit"
             className="w-full py-3 rounded-lg font-bold bg-green-500 hover:bg-green-600 text-white transition"
