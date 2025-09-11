@@ -2,10 +2,10 @@
 
 import Link from "next/link"
 import { useSearchParams } from "next/navigation"
-import { useState, useEffect } from "react"
+import { useState, useEffect, Suspense } from "react"
 import { GradientDots } from "@/components/ui/gradient-dots"
 
-export default function Formulaire() {
+function FormulaireContent() {
   const searchParams = useSearchParams()
   const abonnementChoisi = searchParams.get("pack") || "Essentiel"
 
@@ -144,7 +144,7 @@ export default function Formulaire() {
             />
           </div>
 
-          {/* Abonnement (lecture seule, confirmé par le lien) */}
+          {/* Abonnement (lecture seule) */}
           <div>
             <label className="block mb-2">Formule choisie</label>
             <input
@@ -238,5 +238,13 @@ export default function Formulaire() {
         </form>
       </div>
     </div>
+  )
+}
+
+export default function Formulaire() {
+  return (
+    <Suspense fallback={<div className="text-center text-white">Chargement du formulaire...</div>}>
+      <FormulaireContent />
+    </Suspense>
   )
 }
