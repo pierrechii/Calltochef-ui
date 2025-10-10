@@ -23,11 +23,11 @@ export default function Home() {
           </div>
 
           <h1 className="mb-3 text-white text-center text-6xl font-extrabold tracking-tighter md:text-[clamp(2rem,8vw,7rem)]">
-            Votre réceptionniste IA 24/7
+            Votre assistant IA 24/7
           </h1>
 
           <p className="text-white/60 px-6 text-center text-sm md:text-lg lg:text-xl">
-            CallToChef répond aux appels de vos clients, prend les réservations et enregistre les commandes automatiquement.
+            CallToChef répond aux questions de vos clients, gère les réservations et synchronise tout automatiquement.
           </p>
 
           <div className="my-8 flex items-center justify-center gap-1">
