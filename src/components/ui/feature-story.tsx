@@ -66,11 +66,11 @@ export function FeatureStoriesSection() {
       time: "2 min"
     },
     {
-      title: "Promotion Instagram",
-      scenario: "Un client poste une photo de son plat avec #CallToChef",
-      result: "Luna détecte le post, like automatiquement et propose 10% de réduction pour la prochaine visite",
-      icon: "📸",
-      time: "Instant"
+      title: "Réservation pour événement spécial",
+      scenario: "Un client appelle pour réserver une table pour son anniversaire de mariage",
+      result: "Rézo identifie l'occasion spéciale, propose la meilleure table disponible et prépare une attention spéciale",
+      icon: "💕",
+      time: "3 min"
     }
   ]
 

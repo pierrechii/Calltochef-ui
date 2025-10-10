@@ -44,7 +44,7 @@ export function ImprovedTestimonial({ name, restaurant, role, avatar, testimonia
       
       <div className="mt-4 flex items-center justify-between">
         <div className="flex space-x-2">
-          <span className="bg-green-500/20 text-green-300 px-2 py-1 rounded-full text-xs">+300% Instagram</span>
+          <span className="bg-green-500/20 text-green-300 px-2 py-1 rounded-full text-xs">+150% satisfaction</span>
           <span className="bg-blue-500/20 text-blue-300 px-2 py-1 rounded-full text-xs">20h économisées</span>
         </div>
         <div className="text-xs text-gray-500">Depuis 3 mois</div>
@@ -69,8 +69,8 @@ export function ImprovedTestimonialsSection() {
       restaurant: "Chez Antoine",
       role: "Directeur de salle",
       avatar: "👨‍🍳",
-      testimonial: "L'agent social Luna a boosté notre présence Instagram de 300% ! Nos clients adorent les interactions personnalisées. On reçoit des messages de félicitations tous les jours.",
-      highlight: "boosté notre présence Instagram de 300%",
+      testimonial: "Charly a transformé notre service client ! Nos clients adorent les réponses instantanées et personnalisées. On reçoit des messages de félicitations tous les jours.",
+      highlight: "transformé notre service client",
       rating: 5
     },
     {

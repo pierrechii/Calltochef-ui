@@ -61,8 +61,8 @@ export default function Presentation() {
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             <span className="bg-purple-500/20 text-purple-300 px-4 py-2 rounded-full font-medium">📅 Agent Rézo</span>
             <span className="bg-blue-500/20 text-blue-300 px-4 py-2 rounded-full font-medium">💬 Agent Charly</span>
-          </div>
-          
+        </div>
+
           <PricingTable />
         </section>
 
@@ -135,11 +135,6 @@ export default function Presentation() {
               description="Notifications et rappels par email"
             />
             <IntegrationBadge
-              name="Instagram"
-              icon="📸"
-              description="Gestion automatique des commentaires"
-            />
-            <IntegrationBadge
               name="Google Sheets"
               icon="📊"
               description="Export des données et statistiques"
@@ -181,7 +176,7 @@ export default function Presentation() {
                 💪 Voir la démo en direct
               </Link>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
               <div className="flex items-center justify-center space-x-2">
                 <span className="text-green-400 text-xl">✓</span>
@@ -194,8 +189,8 @@ export default function Presentation() {
               <div className="flex items-center justify-center space-x-2">
                 <span className="text-green-400 text-xl">✓</span>
                 <span className="text-gray-300"><strong>Support inclus</strong></span>
-              </div>
             </div>
+          </div>
           </div>
         </section>
       </div>
