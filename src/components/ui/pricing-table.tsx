@@ -112,18 +112,18 @@ export function PricingTable() {
       name: "Équipe complète",
       price: "€129",
       period: "/mois",
-      description: "Rézo + Charly + Luna",
+      description: "Rézo + Charly + Personnalisation",
       icon: "🚀",
       color: "purple",
       features: [
         "✅ Toute l'équipe IA",
-        "📱 Animation réseaux sociaux automatique",
         "🎨 Personnalisation complète des agents",
         "🔗 Intégrations CRM sur mesure",
         "🎓 Formation complète (1h)",
         "🤝 Accompagnement dédié",
         "🆘 Support technique illimité",
-        "🌍 Multilingue (FR/EN/ES)"
+        "🌍 Multilingue (FR/EN/ES)",
+        "📊 Analytics avancées"
       ],
       buttonText: "⭐ Demander un devis",
       buttonLink: "/formulaire?pack=Sur-Mesure"
