@@ -2,14 +2,6 @@
 
 import Link from "next/link"
 import { ShaderAnimation } from "@/components/ui/shader-animation"
-import { AgentAvatar } from "@/components/ui/agent-avatar"
-import { FeatureStoriesSection } from "@/components/ui/feature-story"
-import { ImprovedTestimonialsSection } from "@/components/ui/improved-testimonial"
-import { IntegrationBadge } from "@/components/ui/integration-badge"
-import { DashboardStats } from "@/components/ui/dashboard-stats"
-import { SectionDivider } from "@/components/ui/section-divider"
-import { PricingTable } from "@/components/ui/pricing-table"
-import { HowItWorksSection } from "@/components/ui/how-it-works"
 
 export default function Presentation() {
   return (
@@ -21,188 +13,140 @@ export default function Presentation() {
 
       {/* Contenu */}
       <div className="relative z-10 flex flex-col items-center px-6 py-24">
-        {/* Hero Section */}
-        <div className="text-center mb-24 max-w-5xl">
-          <div className="inline-flex items-center bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-500/30 rounded-full px-8 py-3 mb-8">
-            <span className="text-purple-300 text-sm font-medium">🚀 Révolutionnez votre restaurant avec l'IA</span>
-          </div>
-          <h1 className="text-5xl md:text-7xl font-extrabold mb-8 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
-            Votre équipe IA
+        {/* Titre et sous-titre */}
+        <div className="text-center mb-24 max-w-3xl">
+          <h1 className="text-4xl md:text-6xl font-extrabold mb-6">
+            Découvrez CallToChef
           </h1>
-          <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-4xl mx-auto">
-            Trois agents IA spécialisés qui travaillent 24h/24 pour automatiser vos réservations, 
-            répondre à vos clients et animer vos réseaux sociaux
+          <p className="text-lg md:text-xl text-gray-200">
+            Le chat IA intelligent qui répond à vos clients, gère vos réservations
+            et synchronise tout automatiquement — 24h/24.
           </p>
-          <div className="flex flex-wrap justify-center gap-4 text-sm mb-8">
-            <span className="bg-green-500/20 text-green-300 px-4 py-2 rounded-full font-medium">📅 Agent Rézo - Réservations</span>
-            <span className="bg-blue-500/20 text-blue-300 px-4 py-2 rounded-full font-medium">💬 Agent Charly - Support</span>
-            <span className="bg-purple-500/20 text-purple-300 px-4 py-2 rounded-full font-medium">📱 Agent Luna - Social</span>
         </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/formulaire?pack=Essentielle"
-              className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full font-bold text-white hover:scale-105 transition-all duration-300 shadow-lg"
-            >
-              🎯 Essayer gratuitement
-            </Link>
-            <Link
-              href="#how-it-works"
-              className="px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full font-bold text-white hover:scale-105 transition-all duration-300 shadow-lg"
-            >
-              💡 Voir la démo
-            </Link>
-          </div>
+        {/* Présentation synthétique */}
+        <div className="mb-24 text-center max-w-2xl">
+          <h2 className="text-2xl font-semibold mb-6">
+            Pourquoi choisir CallToChef ?
+          </h2>
+          <ul className="space-y-3 text-lg text-gray-300">
+            <li>🤖 Chat IA automatique — répond aux questions 24h/24</li>
+            <li>📅 Gestion des réservations — prise et confirmation instantanées</li>
+            <li>⏰ Gain de temps — libère votre équipe en salle et en cuisine</li>
+            <li>✨ Expérience moderne — service premium pour vos clients</li>
+          </ul>
         </div>
 
-        {/* Section Agents IA */}
-        <SectionDivider title="👥 Vos agents IA spécialisés" subtitle="Chaque agent est expert dans son domaine pour un service optimal" />
-        
-        <section className="w-full max-w-6xl mb-24">
+        {/* Section Pricing */}
+        <section className="w-full max-w-6xl text-center">
+          <h2 className="text-3xl font-bold mb-6 text-cyan-400">💰 Nos offres</h2>
+          <p className="text-gray-300 mb-12">
+            Choisissez l'offre adaptée à votre restaurant
+          </p>
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <AgentAvatar
-              name="Rézo"
-              role="Agent Réservations"
-              emoji="📅"
-              description="Gère toutes vos réservations, vérifie la disponibilité, confirme les créneaux et synchronise avec votre planning."
-            />
-            <AgentAvatar
-              name="Charly"
-              role="Agent Support"
-              emoji="💬"
-              description="Répond à toutes les questions clients sur le menu, les horaires, les allergènes et les recommandations."
-            />
-            <AgentAvatar
-              name="Luna"
-              role="Agent Social"
-              emoji="📱"
-              description="Anime vos réseaux sociaux, gère les avis, propose des promotions et fidélise vos clients."
-            />
-          </div>
-        </section>
-
-        {/* Section Récits concrets */}
-        <SectionDivider title="🎬 Récits concrets" subtitle="Voyez comment vos agents IA gèrent les situations réelles en temps réel" />
-        
-        <section className="w-full max-w-6xl mb-24">
-          <FeatureStoriesSection />
-        </section>
-
-        {/* Section Tableau de bord */}
-        <SectionDivider title="📊 Votre tableau de bord" subtitle="Suivez vos performances en temps réel" />
-        
-        <section className="w-full max-w-6xl mb-24">
-          <DashboardStats />
-        </section>
-
-        {/* Section Témoignages */}
-        <SectionDivider title="💬 Ils nous font confiance" subtitle="Découvrez les retours de nos clients restaurateurs" />
-        
-        <section className="w-full max-w-6xl mb-24">
-          <ImprovedTestimonialsSection />
-        </section>
-
-        {/* Section Comment ça marche */}
-        <SectionDivider title="🔧 Comment ça marche ?" subtitle="Installation en 4 étapes simples" id="how-it-works" />
-        
-        <section className="w-full max-w-6xl mb-24">
-          <HowItWorksSection />
-        </section>
-
-        {/* Section Intégrations */}
-        <SectionDivider title="🔗 Intégrations natives" subtitle="Connectez vos outils existants en quelques clics" />
-        
-        <section className="w-full max-w-6xl mb-24">
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
-            <IntegrationBadge
-              name="Google Calendar"
-              icon="📅"
-              description="Synchronisation automatique des réservations"
-            />
-            <IntegrationBadge
-              name="WhatsApp"
-              icon="📱"
-              description="Messages et confirmations instantanées"
-            />
-            <IntegrationBadge
-              name="Gmail"
-              icon="📧"
-              description="Notifications et rappels par email"
-            />
-            <IntegrationBadge
-              name="Instagram"
-              icon="📸"
-              description="Gestion automatique des commentaires"
-            />
-            <IntegrationBadge
-              name="Google Sheets"
-              icon="📊"
-              description="Export des données et statistiques"
-            />
-            <IntegrationBadge
-              name="Notion"
-              icon="📋"
-              description="Tableau de bord personnalisé"
-            />
-          </div>
-        </section>
-
-        {/* Section Tarifs & Offres */}
-        <SectionDivider title="💰 Tarifs & Offres" subtitle="Choisissez votre équipe IA selon vos besoins" />
-        
-        <section className="w-full max-w-6xl mb-24">
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
-            <span className="bg-purple-500/20 text-purple-300 px-4 py-2 rounded-full font-medium">📅 Agent Rézo</span>
-            <span className="bg-blue-500/20 text-blue-300 px-4 py-2 rounded-full font-medium">💬 Agent Charly</span>
-            <span className="bg-pink-500/20 text-pink-300 px-4 py-2 rounded-full font-medium">📱 Agent Luna</span>
-          </div>
-          
-          <PricingTable />
-        </section>
-
-        {/* Section Essai Gratuit */}
-        <SectionDivider title="🎯 Essai Gratuit" subtitle="Commencez dès aujourd'hui sans engagement" />
-        
-        <section className="w-full max-w-5xl mb-24">
-          <div className="bg-gradient-to-r from-purple-900/40 to-cyan-900/40 border border-purple-500/30 rounded-3xl p-12 text-center">
-            <div className="text-8xl mb-8 animate-bounce">🚀</div>
-            <h3 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
-              Prêt à révolutionner votre restaurant ?
-            </h3>
-            <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
-              Rejoignez plus de <strong className="text-cyan-400">500 restaurateurs</strong> qui font confiance à CallToChef 
-              pour automatiser leur service client et <strong className="text-purple-400">économiser 20h par semaine</strong>.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-6 justify-center mb-10">
+            {/* Offre Essentielle */}
+            <div className="bg-zinc-900/70 border border-zinc-700 rounded-2xl p-8 shadow-xl hover:scale-105 transition duration-300">
+              <h3 className="text-2xl font-bold mb-3">🥈 Offre Essentielle</h3>
+              <p className="text-gray-400 mb-4">
+                Démarrez sans effort
+              </p>
+              <p className="text-4xl font-extrabold text-green-400 mb-2">
+                €29<span className="text-base font-normal">/mois</span>
+              </p>
+              <p className="text-sm text-gray-400 mb-6">
+                Essai gratuit 7 jours — sans engagement
+              </p>
+              <ul className="text-sm text-gray-300 space-y-2 mb-8 text-left">
+                <li>💬 Chat IA intégré sur le site web</li>
+                <li>🤖 Réponses automatiques aux questions fréquentes</li>
+                <li>📅 Prise de réservation instantanée</li>
+                <li>📧 Confirmation automatique par e-mail</li>
+                <li>📆 Intégration Google Calendar</li>
+                <li>📊 Enregistrement automatique dans Google Sheets</li>
+                <li>✨ Personnalisation basique du message d'accueil</li>
+                <li>📧 Support par e-mail</li>
+              </ul>
               <Link
                 href="/formulaire?pack=Essentielle"
-                className="px-10 py-5 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full font-bold text-white hover:scale-105 transition-all duration-300 shadow-2xl text-lg"
+                className="block w-full py-3 bg-green-500 rounded-lg font-bold hover:bg-green-600 transition"
               >
-                🎯 Essayer gratuitement 7 jours
+                Essayer CallToChef gratuitement
               </Link>
+            </div>
+
+            {/* Offre Confort */}
+            <div className="bg-zinc-900/70 border-2 border-cyan-400 rounded-2xl p-8 shadow-2xl hover:scale-105 transition duration-300 relative">
+              <span className="absolute -top-4 right-6 bg-cyan-400 text-black px-4 py-1 rounded-full text-xs font-bold">
+                Populaire
+              </span>
+              <h3 className="text-2xl font-bold mb-3">🥇 Offre Confort</h3>
+              <p className="text-gray-400 mb-4">
+                L'assistant IA complet pour votre restaurant
+              </p>
+              <p className="text-4xl font-extrabold text-green-400 mb-2">
+                €69<span className="text-base font-normal">/mois</span>
+              </p>
+              <p className="text-sm text-gray-400 mb-6">
+                Sans frais d'installation — résiliable à tout moment
+              </p>
+              <ul className="text-sm text-gray-300 space-y-2 mb-8 text-left">
+                <li>✅ Tout le pack Essentiel</li>
+                <li>📱 Messages automatiques de rappel (e-mail ou SMS)</li>
+                <li>📋 Tableau de bord Notion ou Google Sheets</li>
+                <li>🎨 Personnalisation avancée du ton et des scénarios</li>
+                <li>⚡ Support prioritaire (WhatsApp / chat direct)</li>
+                <li>🔄 Mise à jour mensuelle gratuite du chat IA</li>
+              </ul>
               <Link
                 href="/formulaire?pack=Confort"
-                className="px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full font-bold text-white hover:scale-105 transition-all duration-300 shadow-2xl text-lg"
+                className="block w-full py-3 bg-green-500 rounded-lg font-bold hover:bg-green-600 transition"
               >
-                💪 Voir la démo en direct
+                Passer à l'offre Confort
               </Link>
             </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
-              <div className="flex items-center justify-center space-x-2">
-                <span className="text-green-400 text-xl">✓</span>
-                <span className="text-gray-300"><strong>Installation en 24h</strong></span>
-              </div>
-              <div className="flex items-center justify-center space-x-2">
-                <span className="text-green-400 text-xl">✓</span>
-                <span className="text-gray-300"><strong>Essai gratuit 7 jours</strong></span>
-              </div>
-              <div className="flex items-center justify-center space-x-2">
-                <span className="text-green-400 text-xl">✓</span>
-                <span className="text-gray-300"><strong>Support inclus</strong></span>
-              </div>
+
+            {/* Offre Sur-Mesure */}
+            <div className="bg-zinc-900/70 border border-zinc-700 rounded-2xl p-8 shadow-xl hover:scale-105 transition duration-300">
+              <h3 className="text-2xl font-bold mb-3">💼 Offre Sur-Mesure</h3>
+              <p className="text-gray-400 mb-4">
+                L'IA à votre image
+              </p>
+              <p className="text-4xl font-extrabold text-green-400 mb-2">
+                Sur devis
+              </p>
+              <p className="text-sm text-gray-400 mb-6">
+                À partir de 129 € / mois
+              </p>
+              <ul className="text-sm text-gray-300 space-y-2 mb-8 text-left">
+                <li>✅ Tout le pack Confort</li>
+                <li>🎨 Personnalisation complète du chat IA</li>
+                <li>🔗 Intégration sur mesure avec vos outils (CRM, site web)</li>
+                <li>🎓 Formation express (30 min) au tableau de bord</li>
+                <li>🤝 Accompagnement individuel jusqu'à la mise en ligne</li>
+                <li>🆘 Assistance technique illimitée</li>
+                <li>🌍 Option multilingue (français, anglais, espagnol)</li>
+              </ul>
+              <Link
+                href="/formulaire?pack=Sur-Mesure"
+                className="block w-full py-3 bg-green-500 rounded-lg font-bold hover:bg-green-600 transition"
+              >
+                Demander un devis personnalisé
+              </Link>
             </div>
+          </div>
+
+          {/* Texte de conclusion */}
+          <div className="mt-16 max-w-3xl mx-auto text-center">
+            <p className="text-lg text-gray-200 mb-4">
+              CallToChef automatise vos réservations et vos échanges clients pour que vous puissiez vous concentrer sur votre cuisine.
+            </p>
+            <p className="text-base text-gray-300 mb-4">
+              Aucun logiciel complexe, aucune configuration technique : tout est prêt en moins de 24 heures.
+            </p>
+            <p className="text-xl font-semibold text-cyan-400">
+              Essayez gratuitement dès aujourd'hui.
+            </p>
           </div>
         </section>
       </div>
