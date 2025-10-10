@@ -118,7 +118,7 @@ export default function Presentation() {
         <SectionDivider title="🔗 Intégrations natives" subtitle="Connectez vos outils existants en quelques clics" />
         
         <section className="w-full max-w-6xl mb-24">
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-6 justify-items-center">
             <IntegrationBadge
               name="Google Calendar"
               icon="📅"
