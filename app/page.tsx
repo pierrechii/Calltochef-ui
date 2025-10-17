@@ -14,7 +14,6 @@ export default function Home() {
       <Header />
       <main>
         <HeroSection />
-        <TrustBadges />
         <AdvantagesSection />
         <ProcessSection />
         <TestimonialsSection />
