@@ -51,7 +51,7 @@ export function TestimonialsSection() {
             Ce que disent nos clients
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Des milliers de clients nous font confiance pour leurs expériences culinaires exceptionnelles
+            Des restaurateurs satisfaits qui ont transformé leur gestion client
           </p>
         </div>
 

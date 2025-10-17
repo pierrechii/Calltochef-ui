@@ -95,7 +95,7 @@ export default function Presentation() {
         </section>
 
         {/* Section Témoignages */}
-        <SectionDivider title="💬 Ils nous font confiance" subtitle="Découvrez les retours de nos clients restaurateurs" />
+                    <SectionDivider title="💬 Témoignages clients" subtitle="Découvrez les retours de nos clients restaurateurs" />
         
         <section className="w-full max-w-6xl mb-24">
           <ImprovedTestimonialsSection />

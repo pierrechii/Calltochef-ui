@@ -69,15 +69,6 @@ export function AgentsSection() {
           ))}
         </div>
 
-        {/* CTA après agents */}
-        <div className="text-center mt-16">
-          <Link 
-            href="/formulaire?pack=Essentielle"
-            className="bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-200 hover:scale-105 shadow-lg inline-block"
-          >
-            Découvrir tous nos agents IA
-          </Link>
-        </div>
       </div>
     </section>
   )
