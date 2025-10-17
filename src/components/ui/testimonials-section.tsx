@@ -20,7 +20,7 @@ export function TestimonialsSection() {
       role: "Propriétaire",
       company: "Restaurant La Terrasse",
       avatar: "👨‍💼",
-      content: "Service impeccable ! L'installation s'est faite en 5 minutes, l'IA connaît parfaitement notre menu et nos horaires. Plus jamais de clients perdus à cause d'un téléphone occupé.",
+          content: "Service impeccable ! L'installation s'est faite rapidement, l'IA connaît parfaitement notre menu et nos horaires. Plus jamais de clients perdus à cause d'un téléphone occupé.",
       rating: 5,
       image: "/testimonial-2.jpg"
     },

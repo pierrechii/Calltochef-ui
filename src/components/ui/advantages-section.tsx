@@ -14,11 +14,11 @@ export function AdvantagesSection() {
       title: "Réservations automatiques",
       description: "Gestion complète des réservations avec synchronisation en temps réel sur votre système. Confirmation automatique par SMS et email."
     },
-    {
-      icon: "⚡",
-      title: "Installation en 5 minutes",
-      description: "Intégration simple avec vos outils existants (Google Agenda, WhatsApp, systèmes de réservation). Aucune formation nécessaire."
-    },
+        {
+          icon: "⚡",
+          title: "Installation rapide",
+          description: "Intégration simple avec vos outils existants (Google Agenda, WhatsApp, systèmes de réservation). Aucune formation nécessaire."
+        },
     {
       icon: "📊",
       title: "Tableau de bord complet",

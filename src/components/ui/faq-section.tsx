@@ -10,10 +10,10 @@ export function FAQSection() {
       question: "Comment fonctionne l'assistant IA ?",
       answer: "Notre assistant IA répond automatiquement aux questions de vos clients via WhatsApp, SMS ou chat web. Il connaît votre menu, vos horaires et peut gérer les réservations en temps réel."
     },
-    {
-      question: "L'installation est-elle compliquée ?",
-      answer: "Pas du tout ! L'installation se fait en 5 minutes. Vous connectez simplement CallToChef à vos outils existants (Google Agenda, WhatsApp, système de réservation) et l'IA est immédiatement opérationnelle."
-    },
+        {
+          question: "L'installation est-elle compliquée ?",
+          answer: "Pas du tout ! L'installation est simple et rapide. Vous connectez simplement CallToChef à vos outils existants (Google Agenda, WhatsApp, système de réservation) et l'IA est immédiatement opérationnelle."
+        },
     {
       question: "Puis-je personnaliser les réponses ?",
       answer: "Absolument ! Vous pouvez adapter toutes les réponses de l'IA à votre restaurant : ton de communication, informations sur votre établissement, politique d'annulation, etc."

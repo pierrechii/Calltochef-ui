@@ -43,7 +43,7 @@ export function OnboardingSection() {
       title: "Configuration initiale",
       description: "Nous configurons votre chat IA avec les informations de votre restaurant (menu, horaires, capacité, etc.)",
       icon: "⚙️",
-      duration: "5 min",
+      duration: "Rapide",
       isCompleted: true
     },
     {
@@ -67,7 +67,7 @@ export function OnboardingSection() {
       title: "Mise en ligne",
       description: "Activation du chat sur votre site web et formation de votre équipe",
       icon: "🚀",
-      duration: "5 min",
+      duration: "Rapide",
       isCompleted: false
     }
   ]
@@ -76,7 +76,7 @@ export function OnboardingSection() {
     <div className="space-y-4">
       <div className="text-center mb-8">
         <h2 className="text-3xl font-bold mb-4 text-purple-400">🎯 Installation en 4 étapes</h2>
-        <p className="text-gray-300">De la configuration à la mise en ligne en moins de 30 minutes</p>
+        <p className="text-gray-300">De la configuration à la mise en ligne rapidement</p>
       </div>
       
       {steps.map((step, index) => (

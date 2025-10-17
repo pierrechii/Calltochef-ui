@@ -22,7 +22,7 @@ const openSans = Open_Sans({
 
 export const metadata: Metadata = {
   title: "CallToChef - Assistant IA pour restaurants",
-  description: "Votre assistant IA disponible 24h/24 pour répondre aux clients, gérer les réservations et synchroniser avec vos systèmes existants. Installation en 5 minutes.",
+      description: "Votre assistant IA disponible 24h/24 pour répondre aux clients, gérer les réservations et synchroniser avec vos systèmes existants. Installation rapide et simple.",
   keywords: "assistant IA restaurant, réservations automatiques, gestion client IA, chatbot restaurant, intelligence artificielle restauration",
   openGraph: {
     title: "CallToChef - Assistant IA pour restaurants",

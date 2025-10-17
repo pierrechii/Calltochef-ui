@@ -4,12 +4,12 @@ import Link from "next/link"
 
 export function ProcessSection() {
   const steps = [
-    {
-      step: "01",
-      title: "Configuration rapide",
-      description: "Connectez CallToChef à vos outils existants (Google Agenda, WhatsApp, système de réservation) en quelques clics. Configuration guidée en 5 minutes.",
-      icon: "⚙️"
-    },
+        {
+          step: "01",
+          title: "Configuration rapide",
+          description: "Connectez CallToChef à vos outils existants (Google Agenda, WhatsApp, système de réservation) en quelques clics. Configuration guidée et simple.",
+          icon: "⚙️"
+        },
     {
       step: "02", 
       title: "Personnalisation",

@@ -45,10 +45,10 @@ export function HowItWorksSection() {
   const steps = [
     {
       step: 1,
-      title: "Configuration en 5 minutes",
+      title: "Configuration rapide",
       description: "Nous configurons vos agents IA avec les informations de votre restaurant (menu, horaires, capacité, etc.)",
       icon: "⚙️",
-      time: "5 min"
+      time: "Rapide"
     },
     {
       step: 2,
@@ -69,7 +69,7 @@ export function HowItWorksSection() {
       title: "Mise en ligne",
       description: "Activation du chat sur votre site web et formation de votre équipe",
       icon: "🚀",
-      time: "5 min"
+      time: "Immédiat"
     }
   ]
 
@@ -79,7 +79,7 @@ export function HowItWorksSection() {
         <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
           🔧 Comment ça marche ?
         </h2>
-        <p className="text-gray-300">De la configuration à la mise en ligne en moins de 30 minutes</p>
+        <p className="text-gray-300">De la configuration à la mise en ligne rapidement</p>
       </div>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -97,7 +97,7 @@ export function HowItWorksSection() {
       
       <div className="text-center mt-8">
         <div className="inline-flex items-center bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-full px-6 py-3">
-          <span className="text-green-300 text-sm font-medium">⚡ Installation totale : 22 minutes en moyenne</span>
+          <span className="text-green-300 text-sm font-medium">⚡ Installation rapide et simple</span>
         </div>
       </div>
     </div>
