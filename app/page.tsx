@@ -3,7 +3,7 @@ import { HeroSection } from "@/components/ui/hero-section";
 import { AdvantagesSection } from "@/components/ui/advantages-section";
 import { ProcessSection } from "@/components/ui/process-section";
 import { TestimonialsSection } from "@/components/ui/testimonials-section";
-import { ChefsSection } from "@/components/ui/chefs-section";
+import { AgentsSection } from "@/components/ui/chefs-section";
 import { FAQSection } from "@/components/ui/faq-section";
 import { TrustBadges } from "@/components/ui/trust-badges";
 import { Footer } from "@/components/ui/footer";
@@ -18,7 +18,7 @@ export default function Home() {
         <AdvantagesSection />
         <ProcessSection />
         <TestimonialsSection />
-        <ChefsSection />
+        <AgentsSection />
         <FAQSection />
       </main>
       <Footer />

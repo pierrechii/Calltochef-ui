@@ -8,28 +8,28 @@ export function TestimonialsSection() {
   const testimonials = [
     {
       name: "Marie Dubois",
-      role: "Directrice Marketing",
-      company: "TechStart Paris",
+      role: "Gérante",
+      company: "Le Bistrot Parisien",
       avatar: "👩‍💼",
-      content: "CallToChef a révolutionné nos dîners d'entreprise. L'IA comprend parfaitement nos préférences et nos chefs créent des expériences culinaires exceptionnelles. Nos clients sont conquis !",
+      content: "CallToChef a révolutionné notre gestion client ! L'IA répond instantanément aux questions, gère les réservations automatiquement. Nos clients sont ravis et notre équipe peut se concentrer sur le service.",
       rating: 5,
       image: "/testimonial-1.jpg"
     },
     {
       name: "Antoine Martin",
-      role: "CEO",
-      company: "InnovateLab",
+      role: "Propriétaire",
+      company: "Restaurant La Terrasse",
       avatar: "👨‍💼",
-      content: "Service impeccable ! L'interface est intuitive, la réservation se fait en 2 minutes, et nos chefs sont toujours à l'heure avec des menus parfaitement adaptés. Je recommande vivement.",
+      content: "Service impeccable ! L'installation s'est faite en 5 minutes, l'IA connaît parfaitement notre menu et nos horaires. Plus jamais de clients perdus à cause d'un téléphone occupé.",
       rating: 5,
       image: "/testimonial-2.jpg"
     },
     {
       name: "Sophie Chen",
-      role: "Fondatrice",
-      company: "GreenTech Solutions",
+      role: "Directrice",
+      company: "Café Moderne",
       avatar: "👩‍🔬",
-      content: "En tant que végétarienne, j'apprécie particulièrement la personnalisation des menus. L'IA propose des alternatives créatives et nos chefs les exécutent à la perfection.",
+      content: "L'assistant IA gère nos réservations même quand nous sommes fermés. Les clients peuvent réserver 24h/24 et reçoivent une confirmation immédiate. Un gain de temps énorme !",
       rating: 5,
       image: "/testimonial-3.jpg"
     }

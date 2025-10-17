@@ -31,8 +31,8 @@ export function Header() {
             <Link href="#processus" className="text-gray-600 hover:text-gray-900 font-medium transition-colors">
               Comment ça marche
             </Link>
-            <Link href="#chefs" className="text-gray-600 hover:text-gray-900 font-medium transition-colors">
-              Nos chefs
+            <Link href="#agents" className="text-gray-600 hover:text-gray-900 font-medium transition-colors">
+              Agents IA
             </Link>
             <Link href="/presentation" className="text-gray-600 hover:text-gray-900 font-medium transition-colors">
               Tarifs
@@ -45,7 +45,7 @@ export function Header() {
               href="/formulaire?pack=Essentielle"
               className="bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-2 rounded-full font-semibold transition-all duration-200 hover:scale-105 shadow-lg"
             >
-              Réserver un chef
+              Essayer CallToChef
             </Link>
           </div>
 
@@ -70,8 +70,8 @@ export function Header() {
               <Link href="#processus" className="text-gray-600 hover:text-gray-900 font-medium">
                 Comment ça marche
               </Link>
-              <Link href="#chefs" className="text-gray-600 hover:text-gray-900 font-medium">
-                Nos chefs
+              <Link href="#agents" className="text-gray-600 hover:text-gray-900 font-medium">
+                Agents IA
               </Link>
               <Link href="/presentation" className="text-gray-600 hover:text-gray-900 font-medium">
                 Tarifs
@@ -80,7 +80,7 @@ export function Header() {
                 href="/formulaire?pack=Essentielle"
                 className="bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-2 rounded-full font-semibold text-center transition-all duration-200"
               >
-                Réserver un chef
+                Essayer CallToChef
               </Link>
             </nav>
           </div>

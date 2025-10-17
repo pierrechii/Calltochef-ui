@@ -21,8 +21,8 @@ export function Footer() {
               <span className="text-xl font-bold">CallToChef</span>
             </Link>
             <p className="text-gray-400 mb-6 max-w-md">
-              Le chef privé propulsé par l'IA chez vous, en quelques clics. 
-              Une expérience culinaire exceptionnelle, personnalisée selon vos goûts.
+              Votre assistant IA pour restaurant, disponible 24h/24. 
+              Réponses automatiques, réservations intelligentes, synchronisation parfaite.
             </p>
             
             {/* CTA principal dans le footer */}
@@ -30,7 +30,7 @@ export function Footer() {
               href="/formulaire?pack=Essentielle"
               className="bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-3 rounded-full font-semibold transition-all duration-200 hover:scale-105 inline-block"
             >
-              Réserver un chef
+              Essayer CallToChef
             </Link>
           </div>
 
@@ -44,8 +44,8 @@ export function Footer() {
               <Link href="#processus" className="block text-gray-400 hover:text-white transition-colors">
                 Comment ça marche
               </Link>
-              <Link href="#chefs" className="block text-gray-400 hover:text-white transition-colors">
-                Nos chefs
+              <Link href="#agents" className="block text-gray-400 hover:text-white transition-colors">
+                Agents IA
               </Link>
               <Link href="/presentation" className="block text-gray-400 hover:text-white transition-colors">
                 Tarifs

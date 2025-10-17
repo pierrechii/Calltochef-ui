@@ -7,28 +7,28 @@ export function FAQSection() {
 
   const faqs = [
     {
-      question: "Comment fonctionne la réservation ?",
-      answer: "C'est très simple ! Vous choisissez votre chef, votre date et heure, puis vous décrivez vos préférences alimentaires. Notre IA propose un menu personnalisé que votre chef adapte et valide. Vous recevez une confirmation avec tous les détails."
+      question: "Comment fonctionne l'assistant IA ?",
+      answer: "Notre assistant IA répond automatiquement aux questions de vos clients via WhatsApp, SMS ou chat web. Il connaît votre menu, vos horaires et peut gérer les réservations en temps réel."
     },
     {
-      question: "Les chefs sont-ils certifiés ?",
-      answer: "Absolument ! Tous nos chefs sont des professionnels certifiés avec plusieurs années d'expérience. Ils sont sélectionnés pour leur expertise culinaire et leur capacité à s'adapter aux préférences de chaque client."
+      question: "L'installation est-elle compliquée ?",
+      answer: "Pas du tout ! L'installation se fait en 5 minutes. Vous connectez simplement CallToChef à vos outils existants (Google Agenda, WhatsApp, système de réservation) et l'IA est immédiatement opérationnelle."
     },
     {
-      question: "Puis-je annuler ma réservation ?",
-      answer: "Oui, vous pouvez annuler votre réservation jusqu'à 24h avant le service. Au-delà de ce délai, des frais d'annulation peuvent s'appliquer selon nos conditions générales."
+      question: "Puis-je personnaliser les réponses ?",
+      answer: "Absolument ! Vous pouvez adapter toutes les réponses de l'IA à votre restaurant : ton de communication, informations sur votre établissement, politique d'annulation, etc."
     },
     {
-      question: "Que se passe-t-il si je suis allergique ?",
-      answer: "Notre IA prend en compte toutes vos allergies et restrictions alimentaires lors de la création du menu. Vos informations sont transmises au chef qui adapte ses recettes en conséquence. La sécurité alimentaire est notre priorité."
+      question: "Que se passe-t-il si l'IA ne sait pas répondre ?",
+      answer: "Dans ce cas, l'IA transfère automatiquement la conversation à votre équipe ou propose au client de vous rappeler. Vous ne perdez jamais un client."
     },
     {
-      question: "Les ingrédients sont-ils inclus ?",
-      answer: "Oui, le prix inclut les ingrédients de qualité sélectionnés par votre chef. Vous n'avez rien à préparer, votre chef arrive avec tout le nécessaire pour créer votre repas."
+      question: "Les réservations sont-elles synchronisées ?",
+      answer: "Oui, toutes les réservations sont automatiquement synchronisées avec votre système existant (Google Agenda, système de réservation, etc.) en temps réel."
     },
     {
-      question: "Puis-je choisir un chef spécifique ?",
-      answer: "Bien sûr ! Vous pouvez choisir votre chef préféré selon ses spécialités et disponibilités. Notre système vous propose les meilleures options selon vos critères."
+      question: "Puis-je suivre les performances ?",
+      answer: "Oui, votre tableau de bord vous donne accès à toutes les métriques : nombre de conversations, réservations générées, taux de satisfaction, etc."
     }
   ]
 

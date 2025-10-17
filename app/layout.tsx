@@ -21,12 +21,12 @@ const openSans = Open_Sans({
 })
 
 export const metadata: Metadata = {
-  title: "CallToChef - Le chef privé propulsé par l'IA",
-  description: "Découvrez une expérience culinaire exceptionnelle avec nos chefs professionnels, assistés par une intelligence artificielle qui personnalise chaque repas selon vos goûts.",
-  keywords: "chef privé, cuisine à domicile, IA, intelligence artificielle, gastronomie, réservation chef",
+  title: "CallToChef - Assistant IA pour restaurants",
+  description: "Votre assistant IA disponible 24h/24 pour répondre aux clients, gérer les réservations et synchroniser avec vos systèmes existants. Installation en 5 minutes.",
+  keywords: "assistant IA restaurant, réservations automatiques, gestion client IA, chatbot restaurant, intelligence artificielle restauration",
   openGraph: {
-    title: "CallToChef - Le chef privé propulsé par l'IA",
-    description: "Découvrez une expérience culinaire exceptionnelle avec nos chefs professionnels, assistés par une intelligence artificielle qui personnalise chaque repas selon vos goûts.",
+    title: "CallToChef - Assistant IA pour restaurants",
+    description: "Votre assistant IA disponible 24h/24 pour répondre aux clients, gérer les réservations et synchroniser avec vos systèmes existants.",
     type: "website",
   },
 }

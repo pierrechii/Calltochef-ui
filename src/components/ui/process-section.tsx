@@ -6,27 +6,27 @@ export function ProcessSection() {
   const steps = [
     {
       step: "01",
-      title: "Réservez en ligne",
-      description: "Choisissez votre chef, date et heure en quelques clics. Notre IA vous propose les meilleures options selon vos préférences.",
-      icon: "📱"
+      title: "Configuration rapide",
+      description: "Connectez CallToChef à vos outils existants (Google Agenda, WhatsApp, système de réservation) en quelques clics. Configuration guidée en 5 minutes.",
+      icon: "⚙️"
     },
     {
       step: "02", 
       title: "Personnalisation",
-      description: "Définissez vos goûts, allergies et envies. Notre IA crée un menu personnalisé que votre chef valide et adapte.",
+      description: "Adaptez les réponses de l'IA à votre restaurant : horaires, spécialités, politique d'annulation. L'assistant apprend votre identité.",
       icon: "🎨"
     },
     {
       step: "03",
-      title: "Confirmation",
-      description: "Recevez la confirmation avec tous les détails : menu, ingrédients, timing. Votre chef vous contacte pour finaliser les détails.",
-      icon: "✅"
+      title: "Activation automatique",
+      description: "Votre assistant IA est immédiatement opérationnel. Il répond aux clients, gère les réservations et synchronise tout automatiquement.",
+      icon: "🚀"
     },
     {
       step: "04",
-      title: "Expérience culinaire",
-      description: "Votre chef arrive à l'heure convenue et vous offre une expérience gastronomique exceptionnelle, adaptée à vos goûts.",
-      icon: "🍽️"
+      title: "Suivi et optimisation",
+      description: "Consultez votre tableau de bord pour suivre les performances et optimiser votre service client. Données en temps réel.",
+      icon: "📊"
     }
   ]
 
@@ -38,7 +38,7 @@ export function ProcessSection() {
             Comment ça marche ?
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Un processus simple et fluide pour une expérience culinaire exceptionnelle
+            Une mise en place simple et rapide pour une efficacité immédiate
           </p>
         </div>
 
@@ -70,7 +70,7 @@ export function ProcessSection() {
             href="/formulaire?pack=Essentielle"
             className="bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-200 hover:scale-105 shadow-lg inline-block"
           >
-            Réserver mon chef
+            Commencer la configuration
           </Link>
         </div>
       </div>

@@ -6,23 +6,23 @@ export function AdvantagesSection() {
   const advantages = [
     {
       icon: "🤖",
-      title: "IA personnalisée",
-      description: "Notre intelligence artificielle apprend vos goûts et préférences pour proposer des menus sur mesure à chaque réservation."
+      title: "Assistant IA 24h/24",
+      description: "Votre assistant répond instantanément aux questions de vos clients, même en dehors des heures d'ouverture. Plus jamais de clients perdus !"
     },
     {
-      icon: "👨‍🍳",
-      title: "Chefs professionnels",
-      description: "Tous nos chefs sont certifiés et expérimentés. Ils s'adaptent à vos envies et créent des expériences culinaires exceptionnelles."
+      icon: "📅",
+      title: "Réservations automatiques",
+      description: "Gestion complète des réservations avec synchronisation en temps réel sur votre système. Confirmation automatique par SMS et email."
     },
     {
       icon: "⚡",
-      title: "Réservation instantanée",
-      description: "Réservez votre chef en quelques clics. Disponible 24h/24, confirmation immédiate et gestion automatique de votre planning."
+      title: "Installation en 5 minutes",
+      description: "Intégration simple avec vos outils existants (Google Agenda, WhatsApp, systèmes de réservation). Aucune formation nécessaire."
     },
     {
-      icon: "🎯",
-      title: "Expérience sur mesure",
-      description: "Chaque repas est adapté à vos besoins : allergies, régimes spéciaux, occasions particulières. Une expérience unique à chaque fois."
+      icon: "📊",
+      title: "Tableau de bord complet",
+      description: "Suivez vos performances en temps réel : réservations, taux de conversion, satisfaction client. Données précieuses pour optimiser votre activité."
     }
   ]
 
@@ -34,7 +34,7 @@ export function AdvantagesSection() {
             Pourquoi choisir CallToChef ?
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Une révolution dans l'art culinaire, alliant tradition et innovation technologique
+            La solution IA qui révolutionne la gestion client de votre restaurant
           </p>
         </div>
 
@@ -56,7 +56,7 @@ export function AdvantagesSection() {
             href="/formulaire?pack=Essentielle"
             className="bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-200 hover:scale-105 shadow-lg inline-block"
           >
-            Commencer maintenant
+            Essayer gratuitement
           </Link>
         </div>
       </div>
