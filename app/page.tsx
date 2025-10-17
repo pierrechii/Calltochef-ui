@@ -4,8 +4,8 @@ import { AdvantagesSection } from "@/components/ui/advantages-section";
 import { ProcessSection } from "@/components/ui/process-section";
 import { TestimonialsSection } from "@/components/ui/testimonials-section";
 import { AgentsSection } from "@/components/ui/chefs-section";
+import { PricingSection } from "@/components/ui/pricing-section";
 import { FAQSection } from "@/components/ui/faq-section";
-import { TrustBadges } from "@/components/ui/trust-badges";
 import { Footer } from "@/components/ui/footer";
 
 export default function Home() {
@@ -18,6 +18,7 @@ export default function Home() {
         <ProcessSection />
         <TestimonialsSection />
         <AgentsSection />
+        <PricingSection />
         <FAQSection />
       </main>
       <Footer />

@@ -47,7 +47,7 @@ export function Footer() {
               <Link href="#agents" className="block text-gray-400 hover:text-white transition-colors">
                 Agents IA
               </Link>
-              <Link href="/presentation" className="block text-gray-400 hover:text-white transition-colors">
+              <Link href="#tarifs" className="block text-gray-400 hover:text-white transition-colors">
                 Tarifs
               </Link>
             </nav>

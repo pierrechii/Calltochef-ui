@@ -34,7 +34,7 @@ export function Header() {
             <Link href="#agents" className="text-gray-600 hover:text-gray-900 font-medium transition-colors">
               Agents IA
             </Link>
-            <Link href="/presentation" className="text-gray-600 hover:text-gray-900 font-medium transition-colors">
+            <Link href="#tarifs" className="text-gray-600 hover:text-gray-900 font-medium transition-colors">
               Tarifs
             </Link>
           </nav>
@@ -73,7 +73,7 @@ export function Header() {
               <Link href="#agents" className="text-gray-600 hover:text-gray-900 font-medium">
                 Agents IA
               </Link>
-              <Link href="/presentation" className="text-gray-600 hover:text-gray-900 font-medium">
+              <Link href="#tarifs" className="text-gray-600 hover:text-gray-900 font-medium">
                 Tarifs
               </Link>
               <Link 
