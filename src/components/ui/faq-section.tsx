@@ -81,16 +81,16 @@ export function FAQSection() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="mailto:support@calltochef.fr"
+                href="mailto:calltochefia@gmail.com"
                 className="bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-3 rounded-full font-semibold transition-all duration-200 hover:scale-105"
               >
                 Contacter le support
               </a>
               <a 
-                href="tel:+33123456789"
+                href="tel:+33769479176"
                 className="border-2 border-gray-300 hover:border-gray-400 text-gray-700 hover:text-gray-900 px-6 py-3 rounded-full font-semibold transition-all duration-200"
               >
-                01 23 45 67 89
+                07 69 47 91 76
               </a>
             </div>
           </div>

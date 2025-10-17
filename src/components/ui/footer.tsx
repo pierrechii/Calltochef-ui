@@ -57,9 +57,9 @@ export function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
             <div className="space-y-2 text-gray-400">
-              <p>support@calltochef.fr</p>
-              <p>01 23 45 67 89</p>
-              <p>Paris, France</p>
+              <p>calltochefia@gmail.com</p>
+              <p>07 69 47 91 76</p>
+              <p>France</p>
             </div>
             
             {/* Réseaux sociaux */}
