@@ -5,20 +5,20 @@ import Link from "next/link"
 export function PricingSection() {
   const plans = [
     {
-      name: "Agent Rézo",
+      name: "Rézo",
       subtitle: "Spécialiste Réservations",
-      price: "29€",
+      price: "29",
       period: "/mois",
       trial: "Essai gratuit 7 jours — sans engagement",
-      icon: "📅",
+      icon: "R",
       color: "emerald",
       features: [
-        "Gestion complète des réservations",
-        "Synchronisation Google Calendar",
-        "Confirmations automatiques par email",
-        "Notifications SMS de rappel",
-        "Export des données dans Google Sheets",
-        "Gestion des annulations et reports",
+        "Prise de réservations via chat IA intégré au site",
+        "Vérification automatique des disponibilités (Google Calendar)",
+        "Création et mise à jour des réservations dans Google Calendar",
+        "Envoi d'emails de confirmation automatiques",
+        "Sauvegarde des réservations dans Google Sheets",
+        "Gestion des annulations et reports par chat",
         "Disponible 24h/24",
         "Support par email"
       ],
@@ -27,21 +27,20 @@ export function PricingSection() {
     },
     {
       name: "Rézo + Charly",
-      subtitle: "Duo Réservations & Support",
-      price: "69€",
+      subtitle: "Duo Réservations & Intelligence",
+      price: "59",
       period: "/mois",
       trial: "Essai gratuit 7 jours — sans engagement",
-      icon: "🤝",
+      icon: "RC",
       color: "blue",
       features: [
-        "Tout l'Agent Rézo",
-        "Support client intelligent 24h/24",
-        "Réponses sur menu et allergènes",
-        "Tableau de bord Notion intégré",
-        "Personnalisation avancée du ton",
-        "Support prioritaire WhatsApp",
-        "Mises à jour mensuelles IA",
-        "Analytics détaillées"
+        "Tout l'agent Rézo",
+        "Chat IA multilingue (FR / EN / ES)",
+        "Réponses automatiques aux questions clients (horaires, menu, allergènes…)",
+        "Personnalisation du ton et du style de réponse",
+        "Mises à jour IA mensuelles",
+        "Tableau de bord Notion / Google Sheets intégré",
+        "Analytics simplifiés (volume de réservations, heures de pointe, confirmations)"
       ],
       cta: "Activer le duo IA",
       ctaLink: "/formulaire?pack=Confort"
@@ -49,20 +48,19 @@ export function PricingSection() {
     {
       name: "Équipe complète",
       subtitle: "Rézo + Charly + Personnalisation",
-      price: "129€",
+      price: "99",
       period: "/mois",
       trial: "Essai gratuit 7 jours — sans engagement",
-      icon: "🚀",
+      icon: "EC",
       color: "purple",
       features: [
         "Toute l'équipe IA",
-        "Personnalisation complète des agents",
-        "Intégrations CRM sur mesure",
-        "Formation complète (1h)",
-        "Accompagnement dédié",
+        "Personnalisation complète de l'agent IA (nom, messages, ton, visuel)",
+        "Adaptation à l'organisation interne du restaurant",
+        "Formation à la prise en main (1h incluse)",
+        "Accompagnement dédié à l'installation",
         "Support technique illimité",
-        "Multilingue (FR/EN/ES)",
-        "Analytics avancées"
+        "Rapports mensuels détaillés (Google Sheets / PDF)"
       ],
       cta: "Demander un devis",
       ctaLink: "/formulaire?pack=Premium"
@@ -121,14 +119,14 @@ export function PricingSection() {
               <div key={index} className={`bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 ${colors.border} border-2`}>
                 {/* Header */}
                 <div className="text-center mb-8">
-                  <div className={`w-16 h-16 bg-gradient-to-r ${colors.gradient} rounded-full flex items-center justify-center text-2xl mx-auto mb-4`}>
+                  <div className={`w-16 h-16 bg-gradient-to-r ${colors.gradient} rounded-full flex items-center justify-center text-xl font-bold text-white mx-auto mb-4`}>
                     {plan.icon}
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
                   <p className={`${colors.text} font-medium mb-4`}>{plan.subtitle}</p>
                   
                   <div className="mb-4">
-                    <span className="text-4xl font-bold text-gray-900">{plan.price}</span>
+                    <span className="text-4xl font-bold text-gray-900">{plan.price}€</span>
                     <span className="text-gray-600">{plan.period}</span>
                   </div>
                   

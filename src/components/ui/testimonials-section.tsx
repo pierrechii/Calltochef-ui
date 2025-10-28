@@ -125,17 +125,6 @@ export function TestimonialsSection() {
             </button>
           </div>
         </div>
-
-        {/* Badges de confiance */}
-        <div className="mt-16 text-center">
-          <p className="text-gray-500 mb-6">Ils nous font confiance</p>
-          <div className="flex justify-center items-center space-x-8 opacity-60">
-            <div className="text-2xl font-bold text-gray-400">TechStart</div>
-            <div className="text-2xl font-bold text-gray-400">InnovateLab</div>
-            <div className="text-2xl font-bold text-gray-400">GreenTech</div>
-            <div className="text-2xl font-bold text-gray-400">StartupX</div>
-          </div>
-        </div>
       </div>
     </section>
   )
