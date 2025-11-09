@@ -11,11 +11,11 @@ export function HeroSection() {
           <div className="space-y-8">
             <div className="space-y-4">
               <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                Votre assistant <span className="text-emerald-500">IA</span> pour restaurant, disponible 24h/24
+                Votre assistant <span className="text-emerald-500">IA</span> intégré à votre site, disponible 24h/24
               </h1>
               <p className="text-xl text-gray-600 leading-relaxed">
-                CallToChef répond automatiquement aux questions de vos clients, gère les réservations 
-                et synchronise tout avec vos systèmes existants. Libérez votre équipe pour se concentrer sur l'essentiel.
+                CallToChef automatise les échanges sur votre site : réponses instantanées, prise de rendez-vous et synchronisation avec vos outils.
+                Faites l'expérience du widget en bas à droite&nbsp;: c'est exactement ce que nous intégrons chez nos clients.
               </p>
             </div>
 
@@ -33,6 +33,20 @@ export function HeroSection() {
               >
                 Voir la démo
               </Link>
+            </div>
+
+            <div className="flex items-start gap-3 rounded-2xl bg-white/70 p-4 shadow-md ring-1 ring-emerald-100">
+              <div className="flex h-10 w-10 flex-none items-center justify-center rounded-full bg-emerald-500/10 text-2xl">
+                💬
+              </div>
+              <div>
+                <p className="text-sm font-semibold text-gray-900">
+                  Démo en direct
+                </p>
+                <p className="text-sm text-gray-600">
+                  Ouvrez le chatbot en bas à droite pour découvrir l'expérience CallToChef intégrée à votre site.
+                </p>
+              </div>
             </div>
 
             {/* Badges de confiance */}
