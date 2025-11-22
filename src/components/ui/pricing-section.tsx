@@ -1,6 +1,8 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
+import { createCtcRipple } from "./ButtonLiquid"
 
 export function PricingSection() {
   const plans = [
@@ -11,6 +13,7 @@ export function PricingSection() {
       period: "/mois",
       trial: "Essai gratuit 7 jours — sans engagement",
       icon: "R",
+      iconImage: "/logo-rezo.png",
       color: "emerald",
       features: [
         "Prise de réservations via chat IA intégré au site",
@@ -32,6 +35,7 @@ export function PricingSection() {
       period: "/mois",
       trial: "Essai gratuit 7 jours — sans engagement",
       icon: "RC",
+      iconImage: "/logo-rezo-charly.png",
       color: "blue",
       features: [
         "Tout l'agent Rézo",
@@ -52,6 +56,7 @@ export function PricingSection() {
       period: "/mois",
       trial: "Essai gratuit 7 jours — sans engagement",
       icon: "EC",
+      iconImage: "/logo-personnalisation.png",
       color: "purple",
       features: [
         "Toute l'équipe IA",
@@ -74,28 +79,44 @@ export function PricingSection() {
           gradient: "from-emerald-500 to-green-500",
           bg: "bg-emerald-50",
           text: "text-emerald-600",
-          border: "border-emerald-200"
+          border: "border-emerald-200",
+          button: {
+            background: "linear-gradient(120deg, rgba(16, 185, 129, 0.35), rgba(110, 231, 183, 0.25))",
+            text: "rgba(4, 47, 46, 0.85)"
+          }
         }
       case "blue":
         return {
           gradient: "from-blue-500 to-cyan-500",
           bg: "bg-blue-50",
           text: "text-blue-600",
-          border: "border-blue-200"
+          border: "border-blue-200",
+          button: {
+            background: "linear-gradient(120deg, rgba(59, 130, 246, 0.32), rgba(14, 165, 233, 0.22))",
+            text: "rgba(15, 23, 42, 0.88)"
+          }
         }
       case "purple":
         return {
           gradient: "from-purple-500 to-indigo-500",
           bg: "bg-purple-50",
           text: "text-purple-600",
-          border: "border-purple-200"
+          border: "border-purple-200",
+          button: {
+            background: "linear-gradient(120deg, rgba(168, 85, 247, 0.32), rgba(59, 130, 246, 0.22))",
+            text: "rgba(24, 24, 38, 0.88)"
+          }
         }
       default:
         return {
           gradient: "from-gray-500 to-gray-600",
           bg: "bg-gray-50",
           text: "text-gray-600",
-          border: "border-gray-200"
+          border: "border-gray-200",
+          button: {
+            background: "linear-gradient(120deg, rgba(156, 163, 175, 0.3), rgba(209, 213, 219, 0.2))",
+            text: "rgba(17, 24, 39, 0.85)"
+          }
         }
     }
   }
@@ -116,11 +137,23 @@ export function PricingSection() {
           {plans.map((plan, index) => {
             const colors = getColorClasses(plan.color)
             return (
-              <div key={index} className={`bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 ${colors.border} border-2`}>
+              <div key={index} className={`bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 ${colors.border} border-2 flex flex-col`}>
                 {/* Header */}
                 <div className="text-center mb-8">
-                  <div className={`w-16 h-16 bg-gradient-to-r ${colors.gradient} rounded-full flex items-center justify-center text-xl font-bold text-white mx-auto mb-4`}>
-                    {plan.icon}
+                  <div className={`flex items-center justify-center mx-auto mb-4 ${plan.iconImage ? 'w-28 h-28' : `w-16 h-16 bg-gradient-to-r ${colors.gradient} rounded-full`}`}>
+                    {plan.iconImage ? (
+                      <Image
+                        src={plan.iconImage}
+                        alt={plan.name}
+                        width={112}
+                        height={112}
+                        className="object-contain"
+                        priority
+                        unoptimized
+                      />
+                    ) : (
+                      <span className="text-xl font-bold text-white">{plan.icon}</span>
+                    )}
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
                   <p className={`${colors.text} font-medium mb-4`}>{plan.subtitle}</p>
@@ -134,7 +167,7 @@ export function PricingSection() {
                 </div>
 
                 {/* Features */}
-                <div className="space-y-4 mb-8">
+                <div className="space-y-4 mb-8 flex-grow">
                   {plan.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-start space-x-3">
                       <div className={`w-5 h-5 rounded-full bg-gradient-to-r ${colors.gradient} flex items-center justify-center flex-shrink-0 mt-0.5`}>
@@ -146,9 +179,14 @@ export function PricingSection() {
                 </div>
 
                 {/* CTA */}
-                <Link 
+                <Link
                   href={plan.ctaLink}
-                  className={`w-full bg-gradient-to-r ${colors.gradient} hover:opacity-90 text-white py-4 rounded-full font-semibold transition-all duration-200 hover:scale-105 text-center block shadow-lg`}
+                  className={`ctc-btn ctc-btn--md w-full justify-center mt-auto`}
+                  style={{
+                    backgroundImage: colors.button.background,
+                    color: colors.button.text
+                  }}
+                  onPointerDown={createCtcRipple}
                 >
                   {plan.cta}
                 </Link>
@@ -162,9 +200,10 @@ export function PricingSection() {
           <p className="text-gray-600 mb-6">
             Besoin d'une solution personnalisée ? Contactez-nous pour un devis sur mesure.
           </p>
-          <Link 
+          <Link
             href="mailto:calltochefia@gmail.com"
-            className="bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-200 hover:scale-105 shadow-lg inline-block"
+            className="ctc-btn ctc-btn--primary ctc-btn--lg inline-flex"
+            onPointerDown={createCtcRipple}
           >
             Contactez-nous
           </Link>

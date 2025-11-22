@@ -235,7 +235,7 @@ export function ChatWidget() {
               <div className="ctc-header__info">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="https://i.postimg.cc/8kW6PTSX/logo-2-00000.jpg"
+                  src="/logo 2_00000.jpg"
                   alt="Assistant IA CallToChef"
                   className="ctc-avatar"
                 />
@@ -312,11 +312,11 @@ export function ChatWidget() {
         }
 
         .ctc-widget-root {
-          position: fixed;
-          bottom: 24px;
-          right: 24px;
-          z-index: 9999;
-          display: flex;
+          position: fixed !important;
+          bottom: 24px !important;
+          right: 24px !important;
+          z-index: 99999 !important;
+          display: flex !important;
           flex-direction: column;
           align-items: flex-end;
           gap: 16px;
@@ -329,18 +329,20 @@ export function ChatWidget() {
         }
 
         .ctc-toggle {
-          pointer-events: auto;
-          width: 64px;
-          height: 64px;
-          border: none;
-          border-radius: 50%;
-          background: radial-gradient(120% 120% at 70% 30%, var(--ctc-brand) 0%, #06d696 60%, #06c089 100%);
-          box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
-          cursor: pointer;
-          position: relative;
-          display: grid;
-          place-items: center;
+          pointer-events: auto !important;
+          width: 64px !important;
+          height: 64px !important;
+          border: none !important;
+          border-radius: 50% !important;
+          background: radial-gradient(120% 120% at 70% 30%, var(--ctc-brand) 0%, #06d696 60%, #06c089 100%) !important;
+          box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25) !important;
+          cursor: pointer !important;
+          position: relative !important;
+          display: grid !important;
+          place-items: center !important;
           transition: transform 0.18s ease, filter 0.2s ease;
+          visibility: visible !important;
+          opacity: 1 !important;
         }
 
         .ctc-toggle::before {
@@ -436,8 +438,8 @@ export function ChatWidget() {
         }
 
         .ctc-avatar {
-          width: 44px;
-          height: 44px;
+          width: 64px;
+          height: 64px;
           border-radius: 50%;
           border: 2px solid rgba(255, 255, 255, 0.85);
           object-fit: cover;
@@ -446,12 +448,12 @@ export function ChatWidget() {
 
         .ctc-header__title {
           font-weight: 600;
-          font-size: 0.95rem;
+          font-size: 1.1rem;
           color: #0f172a;
         }
 
         .ctc-header__subtitle {
-          font-size: 0.8rem;
+          font-size: 0.9rem;
           color: rgba(15, 23, 42, 0.65);
         }
 

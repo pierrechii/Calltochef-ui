@@ -69,12 +69,14 @@ export default function Presentation() {
               name="Rézo"
               role="Agent Réservations"
               emoji="📅"
+              logoImage="/agent-rezo.png"
               description="Gère toutes vos réservations, vérifie la disponibilité, confirme les créneaux et synchronise avec votre planning."
             />
             <AgentAvatar
               name="Charly"
               role="Agent Support"
               emoji="💬"
+              logoImage="/agent-charly.png"
               description="Répond à toutes les questions clients sur le menu, les horaires, les allergènes et les recommandations."
             />
           </div>

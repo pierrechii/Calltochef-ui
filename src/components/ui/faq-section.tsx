@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import { createCtcRipple } from "./ButtonLiquid"
 
 export function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
@@ -80,15 +81,17 @@ export function FAQSection() {
               Notre équipe support est disponible 7j/7 pour vous accompagner
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
+              <a
                 href="mailto:calltochefia@gmail.com"
-                className="bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-3 rounded-full font-semibold transition-all duration-200 hover:scale-105"
+                className="ctc-btn ctc-btn--primary ctc-btn--md"
+                onPointerDown={createCtcRipple}
               >
                 Contacter le support
               </a>
-              <a 
+              <a
                 href="tel:+33769479176"
-                className="border-2 border-gray-300 hover:border-gray-400 text-gray-700 hover:text-gray-900 px-6 py-3 rounded-full font-semibold transition-all duration-200"
+                className="ctc-btn ctc-btn--ghost ctc-btn--md"
+                onPointerDown={createCtcRipple}
               >
                 07 69 47 91 76
               </a>

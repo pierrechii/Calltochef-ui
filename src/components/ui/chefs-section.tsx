@@ -1,6 +1,8 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
+import { useState } from "react"
 
 export function AgentsSection() {
   const agents = [
@@ -9,6 +11,7 @@ export function AgentsSection() {
       specialty: "Gestion des réservations",
       experience: "Agent IA spécialisé",
       avatar: "🤖",
+      logoImage: "/agent-rezo.png",
       description: "Rézo gère automatiquement toutes vos réservations. Il vérifie la disponibilité, confirme les créneaux et synchronise avec votre système.",
       rating: 4.9,
       reviews: 127
@@ -18,6 +21,7 @@ export function AgentsSection() {
       specialty: "Support client intelligent",
       experience: "Agent IA conversationnel", 
       avatar: "💬",
+      logoImage: "/agent-charly.png",
       description: "Charly répond instantanément aux questions de vos clients 24h/24. Il connaît votre menu, vos horaires et votre politique.",
       rating: 4.8,
       reviews: 98
@@ -37,11 +41,28 @@ export function AgentsSection() {
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">
-          {agents.map((agent, index) => (
+          {agents.map((agent, index) => {
+            const [imageError, setImageError] = useState(false)
+            return (
             <div key={index} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
               <div className="text-center mb-6">
-                <div className="w-24 h-24 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-full flex items-center justify-center text-4xl mx-auto mb-4">
-                  {agent.avatar}
+                <div className="w-32 h-32 flex items-center justify-center mx-auto mb-4">
+                  {agent.logoImage && !imageError ? (
+                    <Image
+                      src={agent.logoImage}
+                      alt={agent.name}
+                      width={128}
+                      height={128}
+                      className="object-contain"
+                      priority
+                      unoptimized
+                      onError={() => setImageError(true)}
+                    />
+                  ) : (
+                    <div className="w-24 h-24 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-full flex items-center justify-center text-4xl">
+                      {agent.avatar}
+                    </div>
+                  )}
                 </div>
                 <h3 className="text-2xl font-semibold text-gray-900 mb-2">{agent.name}</h3>
                 <p className="text-emerald-600 font-medium mb-1">{agent.specialty}</p>
@@ -66,7 +87,8 @@ export function AgentsSection() {
                 Inclus dans nos offres
               </div>
             </div>
-          ))}
+            )
+          })}
         </div>
 
       </div>

@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import { createCtcRipple } from "./ButtonLiquid"
 
 export function AdvantagesSection() {
   const advantages = [
@@ -52,9 +53,10 @@ export function AdvantagesSection() {
 
         {/* CTA après avantages */}
         <div className="text-center mt-16">
-          <Link 
+          <Link
             href="/formulaire?pack=Essentielle"
-            className="bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-200 hover:scale-105 shadow-lg inline-block"
+            className="ctc-btn ctc-btn--primary ctc-btn--lg inline-flex"
+            onPointerDown={createCtcRipple}
           >
             Essayer gratuitement
           </Link>

@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import { createCtcRipple } from "./ButtonLiquid"
 
 export function HeroSection() {
   return (
@@ -21,15 +22,17 @@ export function HeroSection() {
 
             {/* CTA Principal */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link 
+              <Link
                 href="/formulaire?pack=Essentielle"
-                className="bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-200 hover:scale-105 shadow-lg text-center"
+                className="ctc-btn ctc-btn--primary ctc-btn--lg ctc-btn--ripple text-center"
+                onPointerDown={createCtcRipple}
               >
                 Essayer CallToChef gratuitement
               </Link>
-              <Link 
+              <Link
                 href="#processus"
-                className="border-2 border-gray-300 hover:border-gray-400 text-gray-700 hover:text-gray-900 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-200 text-center"
+                className="ctc-btn ctc-btn--ghost ctc-btn--lg text-center"
+                onPointerDown={createCtcRipple}
               >
                 Voir la démo
               </Link>

@@ -41,7 +41,6 @@ Nouvelle demande reçue :
 📅 Mise en place : ${body.dateMiseEnPlace}
 
 🕒 Horaires : ${body.horaires}
-📞 Volume appels : ${body.volumeAppels}
 
 📝 Autres précisions :
 ${body.autres}
@@ -58,7 +57,6 @@ ${body.autres}
         <p><b>📦 Abonnement choisi :</b> ${body.abonnement}</p>
         <p><b>📅 Mise en place :</b> ${body.dateMiseEnPlace}</p>
         <p><b>🕒 Horaires :</b> ${body.horaires}</p>
-        <p><b>📞 Volume appels :</b> ${body.volumeAppels}</p>
         <p><b>📝 Autres précisions :</b> ${body.autres}</p>
         <p><b>✅ Conditions acceptées :</b> ${body.conditions ? "Oui" : "Non"}</p>
       `,

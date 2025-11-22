@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import Image from "next/image"
+import { createCtcRipple } from "./ButtonLiquid"
 
 export function Footer() {
   return (
@@ -10,15 +11,16 @@ export function Footer() {
         <div className="grid md:grid-cols-4 gap-8">
           {/* Logo et description */}
           <div className="md:col-span-2">
-            <Link href="/" className="flex items-center space-x-2 mb-4">
-              <Image 
-                src="/logo.png" 
-                alt="CallToChef" 
-                width={32} 
-                height={32}
-                className="h-8 w-auto"
+            <Link href="/" className="flex items-center mb-4">
+              <Image
+                src="/logo.png"
+                alt="CallToChef"
+                width={160}
+                height={160}
+                className="h-24 w-auto"
+                priority
+                unoptimized
               />
-              <span className="text-xl font-bold">CallToChef</span>
             </Link>
             <p className="text-gray-400 mb-6 max-w-md">
               Votre assistant IA pour restaurant, disponible 24h/24. 
@@ -26,9 +28,10 @@ export function Footer() {
             </p>
             
             {/* CTA principal dans le footer */}
-            <Link 
+            <Link
               href="/formulaire?pack=Essentielle"
-              className="bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-3 rounded-full font-semibold transition-all duration-200 hover:scale-105 inline-block"
+              className="ctc-btn ctc-btn--primary ctc-btn--md inline-flex"
+              onPointerDown={createCtcRipple}
             >
               Essayer CallToChef
             </Link>

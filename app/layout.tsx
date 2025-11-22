@@ -26,9 +26,12 @@ export const metadata: Metadata = {
   description: "Votre assistant IA disponible 24h/24 pour répondre aux clients, gérer les réservations et synchroniser avec vos systèmes existants. Installation rapide et simple.",
   keywords: "assistant IA restaurant, réservations automatiques, gestion client IA, chatbot restaurant, intelligence artificielle restauration",
   icons: {
-    icon: '/logo.png',
-    shortcut: '/logo.png',
-    apple: '/logo.png',
+    icon: [
+      { url: '/favicon logo.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon logo.png', sizes: '16x16', type: 'image/png' },
+    ],
+    shortcut: '/favicon logo.png',
+    apple: '/favicon logo.png',
   },
   openGraph: {
     title: "CallToChef",
