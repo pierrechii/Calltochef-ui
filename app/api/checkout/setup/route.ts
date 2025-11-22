@@ -18,8 +18,10 @@ export async function POST(req: Request) {
 
     const validPriceIds = [
       process.env.NEXT_PUBLIC_PRICE_REZO,
-      process.env.NEXT_PUBLIC_PRICE_REZO_CHARLY
-    ];
+      process.env.NEXT_PUBLIC_PRICE_REZO_CHARLY,
+      process.env.PRICE_REZO,
+      process.env.PRICE_REZO_CHARLY
+    ].filter(Boolean); // Retire les valeurs undefined
 
     if (!validPriceIds.includes(offer)) {
       console.error("❌ Offre invalide:", offer);
