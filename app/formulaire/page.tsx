@@ -67,16 +67,35 @@ function FormulaireContent() {
   // Charger les priceIds depuis l'API
   useEffect(() => {
     fetch("/api/prices")
-      .then((res) => res.json())
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error(`API returned ${res.status}`)
+        }
+        return res.json()
+      })
       .then((data) => {
+        if (data.error) {
+          console.error("❌ Erreur API prices:", data.error)
+          return
+        }
         if (data.REZO && data.REZO_CHARLY) {
+          console.log("✅ Price IDs chargés:", { REZO: data.REZO, REZO_CHARLY: data.REZO_CHARLY })
           setPriceIds(data)
         } else {
-          console.error("Price IDs non disponibles depuis l'API:", data)
+          console.error("❌ Price IDs incomplets depuis l'API:", data)
         }
       })
       .catch((error) => {
-        console.error("Erreur lors du chargement des price IDs:", error)
+        console.error("❌ Erreur lors du chargement des price IDs:", error)
+        // Fallback: essayer avec les variables d'environnement directes
+        const fallbackPrices = {
+          REZO: process.env.NEXT_PUBLIC_PRICE_REZO,
+          REZO_CHARLY: process.env.NEXT_PUBLIC_PRICE_REZO_CHARLY,
+        }
+        if (fallbackPrices.REZO && fallbackPrices.REZO_CHARLY) {
+          console.log("✅ Utilisation des price IDs en fallback")
+          setPriceIds(fallbackPrices)
+        }
       })
   }, [])
 
