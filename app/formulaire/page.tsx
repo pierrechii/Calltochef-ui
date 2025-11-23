@@ -187,11 +187,16 @@ function FormulaireContent() {
       })
 
       if (!response.ok) {
+        const errorData = await response.json().catch(() => ({}))
         console.error("Erreur lors de la création de la session Stripe:", {
           status: response.status,
           statusText: response.statusText,
+          error: errorData
         })
-        alert("❌ Erreur lors de l'envoi du formulaire")
+        
+        // Afficher un message d'erreur plus détaillé
+        const errorMessage = errorData.error || "Erreur lors de l'envoi du formulaire"
+        alert(`❌ ${errorMessage}`)
         return
       }
 

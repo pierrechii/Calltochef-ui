@@ -105,17 +105,48 @@ export async function POST(req: Request) {
       stack: error.stack
     });
     
-    // Retourner un message d'erreur plus détaillé en développement
-    const errorMessage = process.env.NODE_ENV === "development" 
-      ? error.message || "Internal server error"
-      : "Internal server error";
+    // Retourner un message d'erreur détaillé
+    let errorMessage = "Internal server error";
+    let errorDetails: any = {};
 
-    return Response.json(
-      { 
-        error: errorMessage,
-        details: process.env.NODE_ENV === "development" ? error : undefined
-      },
-      { status: 500 }
-    );
+    if (error.message) {
+      errorMessage = error.message;
+    }
+
+    // Messages d'erreur spécifiques Stripe
+    if (error.type === "StripeInvalidRequestError") {
+      if (error.message?.includes("Invalid API Key")) {
+        errorMessage = "Clé API Stripe invalide. Vérifiez STRIPE_SECRET_KEY sur Vercel.";
+      } else if (error.message?.includes("No such price")) {
+        errorMessage = "Price ID introuvable dans Stripe. Vérifiez les Price IDs.";
+      } else {
+        errorMessage = `Erreur Stripe: ${error.message}`;
+      }
+    }
+
+    // En production, on retourne un message générique mais on log les détails
+    if (process.env.NODE_ENV === "production") {
+      return Response.json(
+        { 
+          error: errorMessage,
+          code: error.code || error.type
+        },
+        { status: 500 }
+      );
+    } else {
+      // En développement, on retourne plus de détails
+      return Response.json(
+        { 
+          error: errorMessage,
+          code: error.code || error.type,
+          details: {
+            message: error.message,
+            type: error.type,
+            code: error.code
+          }
+        },
+        { status: 500 }
+      );
+    }
   }
 }
