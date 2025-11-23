@@ -48,6 +48,7 @@ function FormulaireContent() {
   const abonnementChoisi = searchParams.get("pack") || "Essentielle"
 
   const [currentStep, setCurrentStep] = useState(1)
+  const [priceIds, setPriceIds] = useState<{ REZO?: string; REZO_CHARLY?: string }>({})
   const [formData, setFormData] = useState<FormData>({
     restaurantName: "",
     address: "",
@@ -62,6 +63,22 @@ function FormulaireContent() {
     abonnement: abonnementChoisi,
     conditions: false,
   })
+
+  // Charger les priceIds depuis l'API
+  useEffect(() => {
+    fetch("/api/prices")
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.REZO && data.REZO_CHARLY) {
+          setPriceIds(data)
+        } else {
+          console.error("Price IDs non disponibles depuis l'API:", data)
+        }
+      })
+      .catch((error) => {
+        console.error("Erreur lors du chargement des price IDs:", error)
+      })
+  }, [])
 
   useEffect(() => {
     setFormData((prev) => ({ ...prev, abonnement: abonnementChoisi }))
@@ -120,15 +137,21 @@ function FormulaireContent() {
       // Déterminer le priceId selon le pack choisi
       let offerPriceId: string | undefined
       if (formData.abonnement === "Essentielle") {
-        offerPriceId = process.env.NEXT_PUBLIC_PRICE_REZO || process.env.REACT_APP_PRICE_REZO
+        offerPriceId = priceIds.REZO || process.env.NEXT_PUBLIC_PRICE_REZO || process.env.REACT_APP_PRICE_REZO
       } else if (formData.abonnement === "Confort") {
-        offerPriceId = process.env.NEXT_PUBLIC_PRICE_REZO_CHARLY || process.env.REACT_APP_PRICE_REZO_CHARLY
+        offerPriceId = priceIds.REZO_CHARLY || process.env.NEXT_PUBLIC_PRICE_REZO_CHARLY || process.env.REACT_APP_PRICE_REZO_CHARLY
       } else {
-        offerPriceId = process.env.NEXT_PUBLIC_PRICE_REZO_CHARLY || process.env.REACT_APP_PRICE_REZO_CHARLY
+        offerPriceId = priceIds.REZO_CHARLY || process.env.NEXT_PUBLIC_PRICE_REZO_CHARLY || process.env.REACT_APP_PRICE_REZO_CHARLY
       }
 
       if (!offerPriceId) {
-        console.error("PriceId non défini pour l'offre:", formData.abonnement)
+        console.error("PriceId non défini pour l'offre:", formData.abonnement, {
+          priceIds,
+          env: {
+            NEXT_PUBLIC_PRICE_REZO: process.env.NEXT_PUBLIC_PRICE_REZO,
+            NEXT_PUBLIC_PRICE_REZO_CHARLY: process.env.NEXT_PUBLIC_PRICE_REZO_CHARLY,
+          }
+        })
         alert("❌ Erreur de configuration. Veuillez contacter le support.")
         return
       }
